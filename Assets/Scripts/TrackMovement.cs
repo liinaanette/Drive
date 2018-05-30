@@ -12,7 +12,6 @@ public class TrackMovement : MonoBehaviour {
     // The direction of the movement
     Vector2 offset;
 
-
     // Use this for initialization
     void Start () {
         
@@ -28,5 +27,6 @@ public class TrackMovement : MonoBehaviour {
     {
         speed += 0.1f;
     }
+
 }
 

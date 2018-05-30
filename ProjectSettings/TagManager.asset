@@ -9,6 +9,8 @@ TagManager:
   - Destroyer
   - Score
   - PauseText
+  - Scoreboard
+  - NameInput
   layers:
   - Default
   - TransparentFX

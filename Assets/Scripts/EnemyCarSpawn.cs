@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class EnemyCarSpawn : MonoBehaviour {
 
-    public GameObject truck;
-    public GameObject police;
-    public GameObject viper;
     GameObject[] cars;
 
     // possible positions on road
@@ -17,7 +14,7 @@ public class EnemyCarSpawn : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         timer = delay;
-        cars = new GameObject[] { truck, truck, police, viper, viper, viper };
+        cars = Resources.LoadAll<GameObject>("Prefabs/Cars");
 	}
 	
 	// Update is called once per frame

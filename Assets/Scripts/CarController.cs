@@ -46,8 +46,6 @@ public class CarController : MonoBehaviour
             else if (rot > 4f) rb.rotation -= 4f;
             else if (rot < -4f) rb.rotation += 4f;
           
-
-
             //rb.rotation = 0f;
         }
 

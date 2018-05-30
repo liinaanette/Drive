@@ -287,10 +287,16 @@
     <Compile Include="Assets\Scripts\EnemyCarSpawn.cs" />
     <Compile Include="Assets\Scripts\GameController.cs" />
     <Compile Include="Assets\Scripts\HealthBar.cs" />
+    <Compile Include="Assets\Scripts\NatureObjectSpawn.cs" />
     <Compile Include="Assets\Scripts\OrdinaryCarMovement.cs" />
     <Compile Include="Assets\Scripts\PoliceCarMovement.cs" />
+    <Compile Include="Assets\Scripts\ReadAndWriteScores.cs" />
     <Compile Include="Assets\Scripts\TrackMovement.cs" />
+    <Compile Include="Assets\Scripts\TreeMovement.cs" />
     <Compile Include="Assets\Scripts\UIManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Resources\Loads\scores.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
