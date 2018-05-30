@@ -15,4 +15,12 @@ public class EnemyCarMovement : MonoBehaviour {
 	void Update () {
         transform.Translate(new Vector3(0,1,0) * speed * Time.deltaTime);
 	}
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag.Equals("Destroyer"))
+        {
+            Destroy(gameObject);
+        }
+    }
 }
