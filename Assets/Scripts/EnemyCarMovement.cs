@@ -23,4 +23,9 @@ public class EnemyCarMovement : MonoBehaviour {
             Destroy(gameObject);
         }
     }
+
+    public void SpeedUp()
+    {
+        speed += 0.1f;
+    }
 }

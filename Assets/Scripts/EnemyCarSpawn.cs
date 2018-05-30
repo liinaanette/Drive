@@ -34,4 +34,9 @@ public class EnemyCarSpawn : MonoBehaviour {
         Vector3 position = new Vector3(x, transform.position.y, transform.position.z);
         Instantiate(car, position, transform.rotation);
     }
+
+    public void SpeedUp()
+    {
+        delay -= 0.05f;
+    }
 }
