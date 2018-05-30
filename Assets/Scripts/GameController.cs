@@ -19,6 +19,8 @@ public class GameController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         score += 1 * Time.deltaTime;
+        UpdateScore();
+
         timer -= Time.deltaTime;
         if (timer <= 0)
         {
@@ -27,17 +29,26 @@ public class GameController : MonoBehaviour {
         }
     }
 
-    void UpdateScore(float newScore)
+    void UpdateScore()
     {
-        scoreText.text = "Score: " + score;
+        scoreText.text = "Score: " + score.ToString("0.00");
     }
 
     void SpeedUp()
     {
-        Debug.Log("Speeding up...");
+        //Debug.Log("Speeding up...");
         FindObjectOfType<EnemyCarSpawn>().SpeedUp();
-        FindObjectOfType<EnemyCarMovement>().SpeedUp();
-        FindObjectOfType<TrackMovement>().SpeedUp();
+        // FindObjectOfType<CarMovement>().SpeedUp();
+        foreach (TrackMovement gameobject in FindObjectsOfType<TrackMovement>())
+        {
+            gameobject.SpeedUp();
+        }
+    }
+
+    public void EndGame()
+    {
+        gameObject.GetComponent<AudioSource>().Play();
+        FindObjectOfType<UIManager>().GameOver();
     }
 }
 
