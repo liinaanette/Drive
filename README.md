@@ -8,3 +8,6 @@ When the car crashes after 3 hits, the player sees the scoreboard with top ten s
 After crashing, the player can choose to replay the game or go to main menu. From there you can also play the game or quit the application.  
 
 ## Some screenshots
+![MainMenu](https://raw.githubusercontent.com/liinaanette/Drive/master/screenshots/drive1.JPG)
+![MainGame](https://raw.githubusercontent.com/liinaanette/Drive/master/screenshots/drive2.JPG)
+![GameOver](https://raw.githubusercontent.com/liinaanette/Drive/master/screenshots/drive3.JPG)
