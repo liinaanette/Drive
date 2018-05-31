@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ * Class for controlling the movement of the player and rotates the car as needed.
+ */
 public class CarController : MonoBehaviour
 {
 
@@ -12,18 +15,16 @@ public class CarController : MonoBehaviour
     private Rigidbody2D rb;
     private HealthBar health;
 
-    // Use this for initialization
     void Start()
-    {
+    { // Find the necessary components
         position = transform.position;
         rb = GetComponent<Rigidbody2D>();
         health = FindObjectOfType<HealthBar>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        // the direction where the player wants to move
         float direction = Input.GetAxis("Horizontal");
         float rot = rb.rotation;
 
@@ -55,13 +56,12 @@ public class CarController : MonoBehaviour
 
     }
 
+    // Player can collide with other cars maximum of 3 times. Each time the player's health gets lower.
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag.Equals("Enemy Car"))
         {
             health.Hit(0.34f);
-            // Destroy(gameObject);
-            //FindObjectOfType<GameController>().EndGame();
-        }
+        } 
     }
 }

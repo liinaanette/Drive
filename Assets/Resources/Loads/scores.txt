@@ -1,7 +1,3 @@
-82.34001;Nimi
-77.634;Nimi
-71.6;Liina
-70.4;Karl
-69.4;Täpi
-69.2;LL
-68.3;Tere
+8.73;Liina
+8.69;Karl
+7.23;Karl

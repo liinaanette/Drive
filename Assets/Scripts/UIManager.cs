@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+// Class for showing GUI
 public class UIManager : MonoBehaviour {
 
     GameObject[] pauseObjects;
     GameObject[] scoreboard;
 
-    // Use this for initialization
+    // Find necessary files and hide them
     void Start () {
         // Debug.Log("UI start");
         pauseObjects = GameObject.FindGameObjectsWithTag("PauseText");
@@ -17,41 +18,42 @@ public class UIManager : MonoBehaviour {
         HideScoreboard();
     }
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
+    // Level is loaded again
     public void Reload()
     {
-        //Application.LoadLevel(Application.loadedLevel);
         Debug.Log("Replay pressed");
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         Time.timeScale = 1;
     }
 
+    // Application is quit
     public void Exit()
     {
         Application.Quit();
     }
 
+    // Level is loaded and the player can play
     public void Play()
     {
         SceneManager.LoadScene(1);
         Time.timeScale = 1;
     }
 
+    // Show the main menu
     public void Menu()
     {
         SceneManager.LoadScene(0);
     }
 
+    // Show the game over text and scoreboard
     public void GameOver()
     {
         Time.timeScale = 0;
         ShowScoreboard();
         ShowGameOver();
     }
+
+    // Methods for hiding and showing objects
 
     public void HideGameOver()
     {

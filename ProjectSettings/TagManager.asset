@@ -11,6 +11,8 @@ TagManager:
   - PauseText
   - Scoreboard
   - NameInput
+  - TreeMovement
+  - coin
   layers:
   - Default
   - TransparentFX

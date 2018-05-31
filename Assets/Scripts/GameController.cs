@@ -5,6 +5,8 @@ using System.IO;
 using UnityEngine;
 using UnityEngine.UI;
 
+
+// Class for controlling many classes and scripts at once
 public class GameController : MonoBehaviour {
 
     public float speedUpTime;
@@ -15,15 +17,13 @@ public class GameController : MonoBehaviour {
     ReadAndWriteScores Scores;
     
 
-	// Use this for initialization
 	void Start () {
         Scores = FindObjectOfType<ReadAndWriteScores>();
         score = 0f;
         timer = speedUpTime;
-        // Scores.ReadAndWrite();
     }
 	
-	// Update is called once per frame
+    // Update score and speed up
 	void Update () {
         score += 1 * Time.deltaTime;
 
@@ -48,18 +48,14 @@ public class GameController : MonoBehaviour {
     // speeds up track movement speed, enemy car spawn rate
     void SpeedUp()
     {
-        //Debug.Log("Speeding up...");
         FindObjectOfType<EnemyCarSpawn>().SpeedUp();
         foreach (TrackMovement gameobject in FindObjectsOfType<TrackMovement>())
         {
             gameobject.SpeedUp();
         }
-        foreach (TreeMovement gameobject in FindObjectsOfType<TreeMovement>())
-        {
-            gameobject.SpeedUp();
-        }
     }
 
+    // Plays the end game sound, tells UIManager to show game over sign and writes the scoreboard
     public void EndGame()
     {
         UpdateScore();
@@ -68,6 +64,10 @@ public class GameController : MonoBehaviour {
         Scores.ReadAndWrite(score);
     }
 
-    
+    // When a coin is caught, it gives additional 30 points to score
+    public void CoinScore()
+    {
+        score += 30;
+    }
 }
 

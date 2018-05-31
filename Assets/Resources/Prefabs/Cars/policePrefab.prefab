@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 50890446321012216}
   - component: {fileID: 70177323809319658}
   - component: {fileID: 82928667354676530}
+  - component: {fileID: 114054795407187812}
   m_Layer: 0
   m_Name: policePrefab
   m_TagString: Enemy Car
@@ -159,6 +160,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &114054795407187812
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1313800953351966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 133ef4b0835902d4db5147a40fc47829, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
 --- !u!114 &114496505717928734
 MonoBehaviour:
   m_ObjectHideFlags: 1

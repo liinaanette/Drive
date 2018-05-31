@@ -20,8 +20,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4064750194338056}
   - component: {fileID: 212345319649348262}
-  - component: {fileID: 114053734505184800}
   - component: {fileID: 61355208598627966}
+  - component: {fileID: 114484574708505114}
   - component: {fileID: 50336685185942058}
   m_Layer: 0
   m_Name: cactusPrefab
@@ -37,8 +37,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1823388254372452}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.523102, y: 2.523101, z: 2.523101}
+  m_LocalPosition: {x: -5.27, y: -1.12, z: 0}
+  m_LocalScale: {x: 2.2994328, y: 2.523101, z: 2.523101}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -75,7 +75,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.0044494607, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -86,9 +86,9 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.32, y: 0.32}
+  m_Size: {x: 0.115320615, y: 0.32}
   m_EdgeRadius: 0
---- !u!114 &114053734505184800
+--- !u!114 &114484574708505114
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -99,6 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4fe18c94131377449424317f4a7dace, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: -5
 --- !u!212 &212345319649348262
 SpriteRenderer:
   m_ObjectHideFlags: 1

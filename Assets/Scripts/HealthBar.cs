@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+// For drawing and managing the health bar
 public class HealthBar : MonoBehaviour
 {
     public float barDisplay; //current progress
@@ -23,13 +24,13 @@ public class HealthBar : MonoBehaviour
         GUI.EndGroup();
     }
 
+    // How much should be drawn and how much health is still remaining
     public void Hit(float damage)
     {
         barDisplay += damage;
         health -= damage;
         if (health <= 0f)
         {
-            // TODO end game
             FindObjectOfType<GameController>().EndGame();
         }
     }
