@@ -1,7 +1,10 @@
 # Drive
 
-The game Drive is a 2D top-down view racing game for one or two people on the same keyboard. One player can play with WASD keys and other with arrow keys.
-The point of the game is to get points and make records; there is no definite winning point because you can play the game indefinitely.
-One or two cars race on three-lane highways. First, the game starts with car moving slowly but it will get faster every 30 seconds. In addition, on the road there are obstacles, other cars, traffic cones, etc.
-When a car crashes, the game is over (for this one player). There is a scoreboard and after crashing the car, if your score is in the top 10, you can insert your name and it stays there.
-When playing with two players, there are two roads so that the two cars cannot collide with each other. When one player crashes, it does not influence the other’s game.
+The game Drive is a 2D top-down view racing game.  
+The player can control the car with LEFT ARROW and RIGHT ARROW or A and D keys.  
+The objective is to dodge other cars and survive as long as possible. The player car can take maximum of three hits from other cars (the health bar is on the top left corner). There is also a possibility to make more points by catching gold coins that spawn every 15 seconds.  
+Over time, enemy cars will start to appear more frequently, making the game harder in time. There is no definite finish, the game can play infinitely.  
+When the car crashes after 3 hits, the player sees the scoreboard with top ten scores. If the player's score is in the top 10, they can enter their name in the input field and the scoreboard is refreshed. The saved scores are written in a text file in Resources folder.  
+After crashing, the player can choose to replay the game or go to main menu. From there you can also play the game or quit the application.  
+
+## Some screenshots
